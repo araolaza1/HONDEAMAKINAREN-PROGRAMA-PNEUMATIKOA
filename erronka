@@ -1,0 +1,83 @@
+/*              KONTROL  BIEGONKORRA
+   Modified By Asier eta Juan
+   CC. Creatives Commons.
+*/
+
+// Aldagaiak deklaratu      
+
+int botoiaA= 3;
+int relayA= 11;
+int balioaA = 0;
+
+// Aldagaiak deklaratu     
+
+int botoiaB= 2;
+int relayB= 12;
+int balioaB = 0;
+
+// Aldagaiak deklaratu   
+
+int botoiaC= 4;
+int relayC= 13;
+int balioaC = 00;
+
+
+
+// Sarrera-Irteerak Inizializatu
+
+void setup()
+  {
+ Serial.begin (9600);
+ pinMode (botoiaA, INPUT);
+ pinMode (relayA, OUTPUT);
+ 
+// Sarrera-Irteerak Inizializatu
+ 
+ 
+ Serial.begin (9600);
+ pinMode (botoiaB, INPUT);
+ pinMode (relayB, OUTPUT);
+ 
+// Sarrera-Irteerak Inizializatu
+
+
+ 
+ Serial.begin (9600);
+ pinMode (botoiaC, INPUT);
+ pinMode (relayC, OUTPUT);
+  }
+
+// Programa nagusia
+
+void loop()
+  {
+ balioaA = digitalRead(botoiaA); //Pultsadorea irakurtzen du
+ Serial.print ("A Pultsagailuaren balioa=  ");
+ Serial.println (balioaA);
+ if(balioaA==0){digitalWrite(relayA,LOW);}
+ else {digitalWrite(relayA,HIGH);}
+ delay (0);
+
+
+// Programa nagusia
+
+
+ 
+ balioaB = digitalRead(botoiaB); //Pultsadorea irakurtzen du
+ Serial.print ("B Pultsagailuaren balioa=  ");
+ Serial.println (balioaB);
+ if(balioaB==0){digitalWrite(relayB,LOW);}
+ else {digitalWrite(relayB,HIGH);}
+ delay (0);
+
+
+// Programa nagusia
+
+ 
+ balioaC = digitalRead(botoiaC); //Pultsadorea irakurtzen du
+ Serial.print ("C Pultsagailuaren balioa=  ");
+ Serial.println (balioaC);
+ if(balioaC==0){digitalWrite(relayC,LOW);}
+ else {digitalWrite(relayC,HIGH);}
+ delay (0);
+}
